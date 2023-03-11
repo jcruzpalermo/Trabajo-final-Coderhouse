@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include(`./partials/head`) %>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+            integrity="sha384-zCbKRCUGaJDkqS1kPbPd 7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="./template1.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<script>
+    const deleteProductById = async (id) => {
+        const response = await fetch(`/api/productos/${id}`, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: 'DELETE',
+        })
+            .then(_ => {
+                window.location.href = "http://localhost:8080/api/productos";
+            });
+    }
+</script>
+
+<body>
+    <header>
+        <%- include('./partials/headerLog', {current: `formProductos`}) %>
+    </header>
+
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-12">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+                            <h3 class="fw-bold mb-2 text-uppercase"> Productos disponibles</h3>
+                            <br>
+                            
+                            <% if (allProductsDTO.length <=0) { %>
+                                <p>No tenemos productos disponibles! :(</p>
+                                <% } else { %>
+                                    <table class="table table-dark">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Descripcion</th>
+                                                <th scope="col">Precio</th>
+                                                <th scope="col">Categoría</th>
+                                                <th scope="col">Imagen</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% allProductsDTO.forEach(product=>{ %>
+                                                <tr>
+                                                    <td>
+                                                        <%= product.nombre %>
+                                                    </td>
+                                                    <td>
+                                                        <%= product.descripcion %>
+                                                    </td>
+                                                    <td>
+                                                        $<%= product.precio %>
+                                                    </td>
+                                                    <td>
+                                                        <%= product.categoria %>
+                                                    </td>
+                                                    <td>
+                                                        <img src="<%= product.link %>" width="60" height="60">
+                                                    </td>
+                                                    <td>
+                                                        <form action="/api/productos/<%= product.id %>" method="GET">
+                                                            <button class="btn btn-info" type="submit">
+                                                                ver tuna
+                                                            </button>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form action="/api/carrito/addProduct" method="POST">
+                                                            <input type="hidden" name="idUser" value=<%=userLog._id %> />
+                                                            <input type="hidden" name="idProduct" value=<%=product.id %> />
+                                                            <button class="btn btn-primary" type="submit">
+                                                                ¡Agregar alcarrito!
+                                                            </button>
+                                                        </form>
+                                                    </td>
+                                                    
+                                                    <% if(userLog.admin) { %>
+                                                        
+                                                    <td>
+                                                        <form action="/api/productos/modificar" method="POST">
+                                                            <input type="hidden" name="idProduct" value=<%= product.id %> />
+                                                            <input type="hidden" name="nameProduct" value=<%= product.nombre  %> />
+                                                            <input type="hidden" name="descripcionProduct" value=<%= product.descripcion %> />
+                                                            <input type="hidden" name="precioProducto" value=<%= product.precio %> />
+                                                            <input type="hidden" name="categoryProduct" value=<%= product.categoria %> />
+                                                            <input type="hidden" name="linkProduct" value=<%= product.link %> />
+                                                            <button class="btn btn-success"type="submit">
+                                                                Modificar producto
+                                                            </button>
+                                                        </form>
+                                                    </td>
+                                                        <td>
+                                                            <button class="btn btn-danger"
+                                                                onclick="deleteProductById(`<%= product.id %>`)">Eliminar producto</button>
+                                                            </td>
+                                                            <% } %>
+                                                    </tr>
+                                                    <% }) %>
+                                            </tbody>
+                                        </table>
+                                        <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    </html>

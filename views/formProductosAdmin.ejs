@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include(`./partials/head`) %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./template1.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <%- include('./partials/headerLog') %>
+    </header>
+
+    <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-12">
+                    <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <div class="mb-md-5 mt-md-4 pb-5">
+
+                                <form action="/api/productos" method="POST">
+                                    <h2 class="fw-bold mb-2 text-uppercase">Agregar producto</h2>
+
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label">Nombre</label>
+                                        <input type="text" name="nombre" class="form-control form-control-lg" required
+                                            minlength="3" />
+                                    </div>
+
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label">Precio</label>
+                                        <input type="number" name="precio" class="form-control form-control-lg" required
+                                            minlength="3" />
+                                    </div>
+
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label">Descripción</label>
+                                        <input type="text" name="descripcion" class="form-control form-control-lg"
+                                            required minlength="3" />
+                                    </div>
+
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label">Imagen (URL)</label>
+                                        <input type="text" name="link" class="form-control form-control-lg" required
+                                            minlength="3" />
+                                    </div>
+
+                                    <div class="form-outline form-white mb-4">
+                                        <label class="form-label">Categoría</label>
+                                        <select name="categoria" class="form-control form-control-lg"
+                                            aria-label="Default select example">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    </div>
+
+                                    <button class="btn btn-outline-light btn-lg px-5" type="submit">Agregar</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

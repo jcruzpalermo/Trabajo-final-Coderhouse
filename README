@@ -1,0 +1,70 @@
+General:
+/ --> home
+/signup --> signup
+/bienvenida --> bienvenida.
+/formAddProduct --> agregar productos [usuarios admin].
+/serverData --> datos del servidor [usuarios admin].
+/error/:msg --> visualización de errores.
+Productos:
+/api/productos (GET)--> se obtienen todos los productos.
+/api/productos/:id (GET)--> se obtiene un producto específico por ID.
+/api/productos/categoria/:categoria (GET) --> se obtienen los productos por una categoría específica.
+/api/productos/modificar (POST)--> visualización para modificar producto [usuarios admin]..
+/api/productos/ (POST)--> agregar producto [usuarios admin].
+/api/productos/:id (PUT)--> modificar producto [usuarios admin].
+/api/productos/:id (DELETE)--> eliminar producto[usuarios admin].
+Carrito:
+/api/carrito (GET)--> se visualiza el carrito.
+/api/carrito/addProduct (POST)--> se agrega el producto al carrito.
+/api/carrito/deleteProduct (DELETE)--> se elimina un producto específico del carrito.
+/api/carrito/:id (DELETE)--> se elimina el carrito para crear la orden.
+Órdenes:
+/api/ordenes (GET)--> se visualizan todas las órdenes [usuarios admin].
+/api/ordenes (POST)--> se crea la órden.
+Chat:
+/chat (GET)--> se visualiza el chat.
+/chat/individual (GET)--> se visualizan los mensajes enviados por el usuario.
+Login:
+/login (GET)--> se visualiza la interfaz para acceder.
+/login (POST)--> se envian los datos del login
+Signup:
+/signup (GET)--> se visualiza la interfaz para registrarse
+/signup (POST)--> se envian los datos para registrarse.
+Logout:
+/logout (GET)--> logout.
+/signup (POST)--> se envian los datos para registrarse.
+Profile:
+/profile (GET)--> se visualiza el perfil.
+API Restful:
+General:
+/ --> home
+/signup --> signup
+/bienvenida --> bienvenida.
+/formAddProduct --> agregar productos [usuarios admin].
+/serverData --> datos del servidor [usuarios admin].
+/error/:msg --> visualización de errores.
+Productos:
+/apiRestful/productos (GET)--> se obtienen todos los productos.
+/apiRestful/productos/:id (GET)--> se obtiene un producto específico por ID.
+/apiRestful/productos/categoria/:categoria (GET) --> se obtienen los productos por una categoría específica.
+/apiRestful/productos/modificar (POST)--> visualización para modificar producto [usuarios admin]..
+/apiRestful/productos/ (POST)--> agregar producto [usuarios admin].
+/apiRestful/productos/:id (PUT)--> modificar producto [usuarios admin].
+/apiRestful/productos/:id (DELETE)--> eliminar producto[usuarios admin].
+Carrito:
+/apiRestful/carrito (GET)--> se visualiza el carrito.
+/apiRestful/carrito/addProduct (POST)--> se agrega el producto al carrito.
+/apiRestful/carrito/deleteProduct (DELETE)--> se elimina un producto específico del carrito.
+/apiRestful/carrito/:id (DELETE)--> se elimina el carrito para crear la orden.
+Órdenes:
+/apiRestful/ordenes (GET)--> se visualizan todas las órdenes [usuarios admin].
+/apiRestful/ordenes (POST)--> se crea la órden.
+Login:
+/apiRestful/login (POST)--> se envian los datos del login
+Signup:
+/apiRestful/signup (POST)--> se envian los datos para registrarse.
+
+Para Iniciar el sevidor en forma local:
+
+Run server: nodemon server.js - CLUSTER --> modo Cluster
+Run server: nodemon server.js  --> modo Fork
