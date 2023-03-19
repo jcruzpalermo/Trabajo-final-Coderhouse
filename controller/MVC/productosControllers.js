@@ -1,5 +1,5 @@
-import storage from "../../daos/DAOFactory";
-import ProductDTO from "../../DTOs/ProductoDTO";
+import storage from "../../daos/DAOFactory.js";
+import ProductDTO from "../../DTOs/ProductoDTO.js";
 const productsStorage = storage().productos;
 
 const addProduct = async (req, res) => {

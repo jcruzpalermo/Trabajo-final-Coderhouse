@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
 
-import storage from "../daos/DAOFactory";
-import MessageDTO from "../DTOs/MessageDTO";
+
+import storage from "../daos/DAOFactory.js";
+import MessageDTO from "../DTOs/MessageDTO.js";
 
 const storageMessages = storage().mensajes;
 

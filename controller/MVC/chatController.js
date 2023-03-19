@@ -1,5 +1,5 @@
 import storage from "../../daos/DAOFactory";
-import MessageDTO from "../../DTOs/MessageDTO";
+import MessageDTO from "../../DTOs/MessageDTO.js";
 const mensajesStorage = storage().mensajes;
 
 const getChat = (req, res) => res.render('chat');

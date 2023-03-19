@@ -3,7 +3,7 @@ JwtStrategy.Strategy;
 import  ExtractJwt  from "passport-jwt";
 ExtractJwt.ExtractJwt;
 import passport from "passport";
-import UserModel from "../dataBase/models/user";
+import UserModel from "../dataBase/models/user.js";
 import dotenv from "dotenv";
 dotenv.config();
 

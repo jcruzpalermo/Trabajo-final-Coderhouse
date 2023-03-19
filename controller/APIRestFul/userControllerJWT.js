@@ -1,6 +1,6 @@
-import UserModel from "../../dataBase/models/user";
-import { createHash } from "../../utils/utils";
-import { isValidPassword } from "../../utils/utils";
+import UserModel from "../../dataBase/models/user.js";
+import { createHash } from "../../utils/utils.js";
+import { isValidPassword } from "../../utils/utils.js";
 import  jwt  from "jsonwebtoken";
 import dotenv from "dotenv";
 dotenv.config();

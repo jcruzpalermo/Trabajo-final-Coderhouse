@@ -1,6 +1,6 @@
-import mongoDB from "../../dataBase/options/mongoDB";
-import messageModel from "../../dataBase/models/message";
-import CrudMongoDB from "../../dataBase/CrudMongoDB/crudMessage";
+import mongoDB from "../../dataBase/options/mongoDB.js";
+import messageModel from "../../dataBase/models/message.js";
+import CrudMongoDB from "../../dataBase/CrudMongoDB/crudMessage.js";
 
 class MessageDAOMongoDB extends CrudMongoDB {
     constructor() {

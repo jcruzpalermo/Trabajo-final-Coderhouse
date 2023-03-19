@@ -1,8 +1,8 @@
-import mongoDB from "../../dataBase/options/mongoDB";
-import productsModel from "../../dataBase/models/producto";
-import userModel from "../../dataBase/models/user";
+import mongoDB from "../../dataBase/options/mongoDB.js";
+import productsModel from "../../dataBase/models/producto.js";
+import userModel from "../../dataBase/models/user.js";
 
-import CrudMongoDB from "../../dataBase/CrudMongoDB/crudCarritos";
+import CrudMongoDB from "../../dataBase/CrudMongoDB/crudCarritos.js";
 
 class CarritoDAOMongoDB extends CrudMongoDB {
     constructor() {

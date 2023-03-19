@@ -7,7 +7,7 @@ import {
     viewFormAddProductController,
     viewDataServerController,
     sobreNosotrosController,
-    viewErrorController } from "../../controller/MVC/generalViewsCotroller";
+    viewErrorController } from "../../controller/MVC/generalViewsCotroller.js";
 
     const viewsRouter = Router();
 

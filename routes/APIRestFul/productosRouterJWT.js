@@ -1,13 +1,13 @@
 import { Router } from "express";
-import jwetStr from "../../authenticationJWT/passport";
-import authorizationJWT from "../../middleware/authenticateJWT";
+import jwetStr from "../../authenticationJWT/passport.js";
+import authorizationJWT from "../../middleware/authenticateJWT.js";
 
 import {  getAllProducts,
     getProductById,
     addProduct,
     updateProductById,
     deleteProductById,
-    getProductsBtCategory } from "../../controller/APIRestFul/productosControllersJWT";
+    getProductsBtCategory } from "../../controller/APIRestFul/productosControllersJWT.js";
 
 //Authentication
 jwetStr();

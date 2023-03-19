@@ -1,11 +1,11 @@
 import { Router } from "express"
-import jwetStr from "../../authenticationJWT/passport";
-import authorizationJWT from "../../middleware/authenticateJWT";
+import jwetStr from "../../authenticationJWT/passport.js";
+import authorizationJWT from "../../middleware/authenticateJWT.js";
 
 import {   viewCart,
     addProductToCart,
     deleteCartById,
-    deleteProductById, } from "../../controller/APIRestFul/carritoControllerjwt";
+    deleteProductById, } from "../../controller/APIRestFul/carritoControllerjwt.js";
 
 //Authentication
 jwetStr();

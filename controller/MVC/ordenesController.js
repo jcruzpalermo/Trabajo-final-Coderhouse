@@ -1,9 +1,9 @@
-import storage from "../../daos/DAOFactory";
+import storage from "../../daos/DAOFactory.js";
 const ordenesStorage = storage().ordenes;
 
-import sendEmail from "../../utils/nodemailerGmail";
-import sendSMS from "../../utils/twilioSMS";
-import sendWhatsApp from "../../utils/twilioWhatsApp";
+import sendEmail from "../../utils/nodemailerGmail.js";
+import sendSMS from "../../utils/twilioSMS.js";
+import sendWhatsApp from "../../utils/twilioWhatsApp.js";
 
 const createOrdenController = async (req, res) => {
     try {

@@ -1,7 +1,7 @@
-import ProductosDAOMongoDB from "./productos/ProductosDAOMongoDB";
-import CarritoDAOMongoDB from "./carritos/CarritoDAOMongoDB";
-import OrdenesDAOMongoDB from "./ordenes/OrdenesDAOMongoDB";
-import MessagesDAOMongoDB from "./mensajes/MessageDAOMongoDB";
+import ProductosDAOMongoDB from "./productos/ProductosDAOMongoDB.js";
+import CarritoDAOMongoDB from "./carritos/CarritoDAOMongoDB.js";
+import OrdenesDAOMongoDB from "./ordenes/OrdenesDAOMongoDB.js";
+import MessagesDAOMongoDB from "./mensajes/MessageDAOMongoDB.js";
 
 const getStorage = () => {
     const storage = `MongoDb`;

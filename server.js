@@ -5,7 +5,7 @@ import { Server as HttpServer } from "http";
 const app = express();
 
 import passport from "passport";
-import  log4js  from "./utils/logs";
+import  log4js  from "./utils/logs.js";
 import MongoStore from "connect-mongo";
 import dotenv from "dotenv";
 import  parsedArgs  from "minimist";
@@ -13,7 +13,7 @@ import  parsedArgs  from "minimist";
 const httpServer = new HttpServer(app);
 const io = new IOServer(httpServer);
 
-import socketIoChat from "./sockets/socketChat";
+import socketIoChat from "./sockets/socketChat.js";
 import cluster from "cluster"; 
 import os from "os";
 

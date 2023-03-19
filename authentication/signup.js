@@ -1,11 +1,11 @@
 import passport from "passport";
-import sendEmail from "../utils/nodemailerGmail";
+import sendEmail from "../utils/nodemailerGmail.js";
 import dotenv from "dotenv";
 dotenv.config();
 import LocalStrategy from "passport-local"
 LocalStrategy.Strategy;
-import UserModel from "../dataBase/models/user";
-import { createHash } from "../utils/utils";
+import UserModel from "../dataBase/models/user.js";
+import { createHash } from "../utils/utils.js";
 
 const signup = () => {
     passport.use('signup', new LocalStrategy({

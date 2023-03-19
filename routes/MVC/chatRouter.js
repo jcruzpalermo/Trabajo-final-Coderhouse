@@ -2,7 +2,7 @@ import { Router } from "express";
 import {
     getChat,
     chatIndividual,
-    chatGrupal, } from "../../controller/MVC/chatController";
+    chatGrupal, } from "../../controller/MVC/chatController.js";
 
     const chatRouter = Router();
 

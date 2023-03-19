@@ -1,5 +1,5 @@
-import storage from "../../daos/DAOFactory";
-import ProductoDTO from "../../DTOs/ProductoDTO";
+import storage from "../../daos/DAOFactory.js";
+import ProductoDTO from "../../DTOs/ProductoDTO.js";
 
 const productsStorage = storage().productos;
 

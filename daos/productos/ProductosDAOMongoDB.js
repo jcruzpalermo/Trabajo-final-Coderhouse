@@ -1,6 +1,6 @@
-import mongoDB from "../../dataBase/options/mongoDB";
-import productsModel from "../../dataBase/models/producto";
-import CrudMongoDB from "../../dataBase/crudMongoDB/crudProductos";
+import mongoDB from "../../dataBase/options/mongoDB.js";
+import productsModel from "../../dataBase/models/producto.js";
+import CrudMongoDB from "../../dataBase/crudMongoDB/crudProductos.js";
 
 class ProductosDAOMongoDB extends CrudMongoDB {
     constructor() {

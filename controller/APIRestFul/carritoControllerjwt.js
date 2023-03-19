@@ -1,4 +1,4 @@
-import storage from "../../daos/DAOFactory";
+import storage from "../../daos/DAOFactory.js";
 const productsStorage = storage().carrito;
 
 const addProductToCart = async (req, res) => {

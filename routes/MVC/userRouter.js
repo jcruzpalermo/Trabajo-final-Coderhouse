@@ -1,15 +1,15 @@
 import { Router } from "express";
-import login from "../../authentication/login";
-import signup from "../../authentication/signup";
-import serializeUser from "../../authentication/serializeUser";
-import deserializeUser from "../../authentication/deserializeUser";
+import login from "../../authentication/login.js";
+import signup from "../../authentication/signup.js";
+import serializeUser from "../../authentication/serializeUser.js";
+import deserializeUser from "../../authentication/deserializeUser.js";
 import passport from "passport";
 
 import {     
     signupFormController,
     loginFormController,
     logoutController,
-    profileController } from "../../controller/MVC/userController";
+    profileController } from "../../controller/MVC/userController.js";
 
 //Multer
 import multer from "multer";

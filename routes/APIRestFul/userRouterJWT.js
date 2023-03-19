@@ -1,8 +1,8 @@
 import { Router } from "express"
-import jwetStr from "../../authenticationJWT/passport";
+import jwetStr from "../../authenticationJWT/passport.js";
 
 import { loginJWTController,
-    registerJWTController } from "../../controller/APIRestFul/userControllerJWT";
+    registerJWTController } from "../../controller/APIRestFul/userControllerJWT.js";
 
 //Authentication
 jwetStr();

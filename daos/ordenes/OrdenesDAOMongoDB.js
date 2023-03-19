@@ -1,9 +1,9 @@
-import mongoDB from "../../dataBase/options/mongoDB";
-import productsModel from "../../dataBase/models/producto";
-import userModel from "../../dataBase/models/user";
-import ordenModel from "../../dataBase/models/ordenes";
+import mongoDB from "../../dataBase/options/mongoDB.js";
+import productsModel from "../../dataBase/models/producto.js";
+import userModel from "../../dataBase/models/user.js";
+import ordenModel from "../../dataBase/models/ordenes.js";
 
-import CrudMongoDB from "../../dataBase/crudMongoDB/crudOrdenes"
+import CrudMongoDB from "../../dataBase/crudMongoDB/crudOrdenes.js"
 
 class OrdenesDAOMongoDB extends CrudMongoDB {
     constructor() {

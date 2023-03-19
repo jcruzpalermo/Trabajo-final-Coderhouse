@@ -4,7 +4,7 @@ import {
     viewCart,
     addProductToCart,
     deleteCartById,
-    deleteProductById, } from "../../controller/MVC/carritoController";
+    deleteProductById, } from "../../controller/MVC/carritoController.js";
 
     const carritoRouter = Router();
 

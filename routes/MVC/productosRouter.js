@@ -9,7 +9,7 @@ import {
     updateProductById,
     deleteProductById,
     viewUpdateProduct,
-    getProductsBtCategory } from "../../controller/MVC/productosControllers";
+    getProductsBtCategory } from "../../controller/MVC/productosControllers.js";
 
 
 const productosRouter = Router();
