@@ -1,4 +1,4 @@
-import storage from "../../daos/DAOFactory";
+import storage from "../../daos/DAOFactory.js";
 import MessageDTO from "../../DTOs/MessageDTO.js";
 const mensajesStorage = storage().mensajes;
 

@@ -2,7 +2,8 @@ import passport from "passport";
 import LocalStrategy from "passport-local";
 LocalStrategy.Strategy;
 import UserModel from "../dataBase/models/user.js"
-import { isValidPassword } from "../utils/logs.js";
+import { isValidPassword } from "../utils/utils.js";
+import log4js from "log4js";
 
 const loggerArchiveError = log4js.getLogger(`errorArchive`);
 

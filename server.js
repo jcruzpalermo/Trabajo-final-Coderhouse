@@ -7,8 +7,6 @@ const app = express();
 import passport from "passport";
 import  log4js  from "./utils/logs.js";
 import MongoStore from "connect-mongo";
-import dotenv from "dotenv";
-import  parsedArgs  from "minimist";
 
 const httpServer = new HttpServer(app);
 const io = new IOServer(httpServer);
@@ -101,18 +99,18 @@ const isLogged = ((req, res, next) => {
 
 //Routers import MVC
 
-import productosRouter from "./routes/MVC/productosRouter";
-import carritoRouter from "./routes/MVC/carritoRouter";
-import { loginRouter, signupRouter, logoutRouter, profileRouter } from "./routes/MVC/userRouter";
-import generalViewsRouter from "./routes/MVC/generalViewsRouter";
-import ordenesRouter from "./routes/MVC/ordenesRouter";
-import chatRouter from "./routes/MVC/chatRouter";
+import productosRouter from "./routes/MVC/productosRouter.js";
+import carritoRouter from "./routes/MVC/carritoRouter.js";
+import { loginRouter, signupRouter, logoutRouter, profileRouter } from "./routes/MVC/userRouter.js";
+import generalViewsRouter from "./routes/MVC/generalViewsRouter.js";
+import ordenesRouter from "./routes/MVC/ordenesRouter.js";
+import chatRouter from "./routes/MVC/chatRouter.js";
 
 //Routers import API Restful
-import { loginJWTRouter, registerJWTRouter } from "./routes/APIRestFul/userRouterJWT";
-import productosRouterJWT from "./routes/APIRestFul/productosRouterJWT";
-import ordenesRouterJWT from "./routes/APIRestFul/ordenesRouterJWT";
-import carritoRouterJWT from "./routes/APIRestFul/carritoRouterJWT";
+import { loginJWTRouter, registerJWTRouter } from "./routes/APIRestFul/userRouterJWT.js";
+import productosRouterJWT from "./routes/APIRestFul/productosRouterJWT.js";
+import ordenesRouterJWT from "./routes/APIRestFul/ordenesRouterJWT.js";
+import carritoRouterJWT from "./routes/APIRestFul/carritoRouterJWT.js";
 
 //Routers MVC
 app.use(`/`, generalViewsRouter);

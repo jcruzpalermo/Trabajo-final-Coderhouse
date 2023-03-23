@@ -1,5 +1,5 @@
 import { Router } from "express";
-import jwetStr from "../../authenticationJWT/passport-js";
+import jwetStr from "../../authenticationJWT/passport.js";
 import authorizationJWT from "../../middleware/authenticateJWT.js";
 
 import {  viewOrdenesController,
