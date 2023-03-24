@@ -106,11 +106,6 @@ import generalViewsRouter from "./routes/MVC/generalViewsRouter.js";
 import ordenesRouter from "./routes/MVC/ordenesRouter.js";
 import chatRouter from "./routes/MVC/chatRouter.js";
 
-//Routers import API Restful
-import { loginJWTRouter, registerJWTRouter } from "./routes/APIRestFul/userRouterJWT.js";
-import productosRouterJWT from "./routes/APIRestFul/productosRouterJWT.js";
-import ordenesRouterJWT from "./routes/APIRestFul/ordenesRouterJWT.js";
-import carritoRouterJWT from "./routes/APIRestFul/carritoRouterJWT.js";
 
 //Routers MVC
 app.use(`/`, generalViewsRouter);
