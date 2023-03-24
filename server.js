@@ -118,12 +118,6 @@ app.use(`/signup`, signupRouter);
 app.use('/logout', isLogged, logoutRouter);
 app.use(`/profile`, isLogged, profileRouter);
 
-//Routers API Restful
-app.use(`/apiRestful/login`, loginJWTRouter);
-app.use(`/apiRestful/signup`, registerJWTRouter);
-app.use(`/apiRestful/productos`, productosRouterJWT);
-app.use(`/apiRestful/carrito`, carritoRouterJWT);
-app.use(`/apiRestful/ordenes`, ordenesRouterJWT);
 
 //Socket chat:
 socketIoChat(io);
